@@ -50,3 +50,6 @@ while choice != "0":
             print("\nOk, usunieto", term)
         else:
             print("\nNie moge tego zrobic, terminu", term, "nie ma w slowniku")
+    else:
+        print('Nieznna opcja')
+input("Aby zakonczyc nacisnij enter")
