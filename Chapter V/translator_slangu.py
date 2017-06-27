@@ -6,6 +6,7 @@ geek = {
     "Percussive maintenance" : "(konserwacja perkusyjna)naprawa urzadzenia elektronicznego przez stukniecie",
     "uninstalled" : "Zwolniony z pracy, odinstalowany, popularne w okresie banki internetowej"
 }
+#Komentarzyk
 if "Dancing Baloney" in geek:
     print("Wiem, co to jest Dancing Baloney.")
 else:
