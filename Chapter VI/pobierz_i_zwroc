@@ -1,0 +1,21 @@
+def display(message):
+    print(message)
+def give_me_five():
+    five = 5
+    return five
+
+def ask_no_yes(question):
+    """Zadaj pytanie, na ktore mozna odpowiedziec tak lub nie"""
+    response = None
+    while response not in ("t", "n"):
+        response = input(question).lower()
+    return response
+
+#main:
+display("Wiadomosc dla Ciebie")
+number = give_me_five()
+print("Oto, co otrzymujemy z funkcji give_me_five()", number)
+answer = ask_no_yes("Prosze wprowadzic 't' lub 'n': ")
+print("Dziekuje za wprowadzenie", answer)
+
+input('Aby zakonczyc program nacisnij enter')
