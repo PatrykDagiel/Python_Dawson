@@ -29,3 +29,38 @@ def next_block(the_file):
         correct = correct[0]
     explanation = next_line(the_file)
     return category, question, answers, correct, explanation
+
+def welcome(title):
+    """Przywitaj gracza i pobierz jego nazwe"""
+    print("\t\t Witaj w turnieju wiedzy!\n")
+    print("\t\t", title, "\n")
+
+def main():
+    trivia_file = open_file("kwiz.txt", "r")
+    title = next_line(trivia_file)
+    welcome(title)
+    score = 0
+
+    category, question, answers, correct, explanation = next_block(trivia_file)
+    while category:
+        print(category)
+        print(question)
+        for i in range(4):
+            print("\t", i + 1, "-", answers[i])
+
+        answer = input("Jaka jest Twoja odpowiedz?: ")
+
+        if answer == correct:
+            print("Odpowiedz prawidlowa", end=' ')
+            score += 1
+        else:
+            print("Odpowiedz nieprawidlowa", end=' ')
+        print(explanation)
+        print("Wynik:", score, "\n\n")
+        category, question, answers, correct, explanation = next_block(trivia_file)
+    trivia_file.close()
+    print("To bylo ostatnie pytanie")
+    print("Twoj wynik to: ", score)
+
+main()
+input("Aby zakonczyc nacisnij enter")
