@@ -10,3 +10,10 @@ class Critter(object):
         print('W tej chwili czuje sie', self.__mood, '\n')
     def __private_method(self):
         print('To jest metoda prywatna.')
+    def public_method(self):
+        print('To jest metoda publiczna')
+        self.__private_method()
+
+crit = Critter(name='Reksio', mood='szczesliwy')
+crit.talk()
+crit.public_method()
