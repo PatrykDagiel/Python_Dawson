@@ -15,3 +15,18 @@ class Critter(object):
         else:
             self.__name = new_name
             print('Zmiana sie powiodla')
+
+    def talk(self):
+        print('Czesc, jestem', self.name)
+
+
+#Main part
+crit = Critter('Reksio')
+crit.talk()
+
+#przez wlasciwosc:
+print('Imie mojego zwierzaka to', end = ' ')
+print(crit.name)
+print('\nProbuje zmienic imie mojego zwierzaka na pusty lancuch znakow...')
+crit.name=''
+print('Teraz nazywa sie', crit.name)
